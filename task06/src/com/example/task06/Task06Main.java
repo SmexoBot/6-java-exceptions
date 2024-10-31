@@ -10,7 +10,10 @@ public class Task06Main {
     }
 
     void printMethodName() {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        Exception ex = new Exception("Ошибка для определения имени метода, вызвана намерено.");
+        StackTraceElement[] elements = ex.getStackTrace();
+
+        System.out.println(elements[1].getMethodName());
     }
 
 }
